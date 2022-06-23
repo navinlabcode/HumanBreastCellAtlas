@@ -1,5 +1,4 @@
 # Loading packages ---------------------------------------------------------
-# source('~/tools/Rum_lib.R')
 setwd("your/working/director")
 library(Seurat)
 library(SeuratWrappers)
@@ -49,7 +48,6 @@ Idents(HBCA_SC_int_sub) <- HBCA_SC_int_sub$final_group1
 HBCA_SN_int_sub <- readRDS('~/Analysis/HBCA/HBCA_new/HBCA_SN_int_sub_5k_022321.rds')
 HBCA_ST_int_epi_sub <- readRDS('HBCA_ST_int_epi_sub_06222022.rds')
 HBCA_sn_marker_df_all <- read.csv('../HBCA_allnuc_markers_022621.csv', sep=',', header=T, row.names = 1)
-
 
 # 1.2 Figure2 ---------------------------------------------------------------
 Figure2_a <- SpatialDimPlot(HBCA_ST_int_sub, group.by='merge_clusters', images='slice1') + scale_fill_manual(values = color_temp)
